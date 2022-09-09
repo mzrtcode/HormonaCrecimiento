@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HormonaCrecimiento.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220827220325_Inicial")]
+    [Migration("20220906032419_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,6 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Diagnostico")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -49,16 +48,16 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("FechaHora")
+                    b.Property<DateTime?>("FechaHora")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("PacienteId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TipoPatron")
+                    b.Property<int?>("TipoPatron")
                         .HasColumnType("int");
 
-                    b.Property<float>("Valor")
+                    b.Property<float?>("Valor")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
@@ -77,7 +76,6 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Apellido")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Discriminator")
@@ -85,14 +83,12 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Documento")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Genero")
+                    b.Property<int?>("Genero")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -111,10 +107,9 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("FechaHoraTime")
+                    b.Property<DateTime?>("FechaHoraTime")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("HistoriaClinicaId")
@@ -132,15 +127,12 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     b.HasBaseType("HormonaCrecimiento.App.Dominio.Persona");
 
                     b.Property<string>("Correo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Parentesco")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefono")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Familiar_Telefono");
 
@@ -152,19 +144,15 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     b.HasBaseType("HormonaCrecimiento.App.Dominio.Persona");
 
                     b.Property<string>("Codigo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Especialidad")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Especializacion")
+                        .HasColumnType("int");
 
                     b.Property<string>("RegistroRetThus")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefono")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Medico");
@@ -175,41 +163,34 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     b.HasBaseType("HormonaCrecimiento.App.Dominio.Persona");
 
                     b.Property<string>("Ciudad")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EndocrinoId")
+                    b.Property<int?>("FamiliarId")
                         .HasColumnType("int");
 
-                    b.Property<int>("FamiliarId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("FechaNacimiento")
+                    b.Property<DateTime?>("FechaNacimiento")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("HistoriaClinicaId")
+                    b.Property<int?>("HistoriaClinicaId")
                         .HasColumnType("int");
 
-                    b.Property<float>("Latitud")
+                    b.Property<float?>("Latitud")
                         .HasColumnType("real");
 
-                    b.Property<float>("Longitud")
+                    b.Property<float?>("Longitud")
                         .HasColumnType("real");
 
-                    b.Property<int>("PediatraId")
+                    b.Property<int?>("MedicoId")
                         .HasColumnType("int");
-
-                    b.HasIndex("EndocrinoId");
 
                     b.HasIndex("FamiliarId");
 
                     b.HasIndex("HistoriaClinicaId");
 
-                    b.HasIndex("PediatraId");
+                    b.HasIndex("MedicoId");
 
                     b.HasDiscriminator().HasValue("Paciente");
                 });
@@ -230,37 +211,23 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
 
             modelBuilder.Entity("HormonaCrecimiento.App.Dominio.Paciente", b =>
                 {
-                    b.HasOne("HormonaCrecimiento.App.Dominio.Medico", "Endocrino")
-                        .WithMany()
-                        .HasForeignKey("EndocrinoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HormonaCrecimiento.App.Dominio.Familiar", "Familiar")
                         .WithMany()
-                        .HasForeignKey("FamiliarId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("FamiliarId");
 
                     b.HasOne("HormonaCrecimiento.App.Dominio.HistoriaClinica", "HistoriaClinica")
                         .WithMany()
-                        .HasForeignKey("HistoriaClinicaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("HistoriaClinicaId");
 
-                    b.HasOne("HormonaCrecimiento.App.Dominio.Medico", "Pediatra")
+                    b.HasOne("HormonaCrecimiento.App.Dominio.Medico", "Medico")
                         .WithMany()
-                        .HasForeignKey("PediatraId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Endocrino");
+                        .HasForeignKey("MedicoId");
 
                     b.Navigation("Familiar");
 
                     b.Navigation("HistoriaClinica");
 
-                    b.Navigation("Pediatra");
+                    b.Navigation("Medico");
                 });
 
             modelBuilder.Entity("HormonaCrecimiento.App.Dominio.HistoriaClinica", b =>

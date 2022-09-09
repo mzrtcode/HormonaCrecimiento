@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj": {}
+    "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj": {
+    "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj",
         "projectName": "HormonaCrecimiento.App.Dominio",
-        "projectPath": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj",
+        "projectPath": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\silent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\silent\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj": {
+    "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj",
         "projectName": "HormonaCrecimiento.App.Persistencia",
-        "projectPath": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj",
+        "projectPath": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\HormonaCrecimiento.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\silent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\obj\\",
+        "outputPath": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\silent\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -79,8 +79,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\silent\\Documents\\Proyecto\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj"
+              "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\silent\\Desktop\\HormonaCrecimiento.App\\HormonaCrecimiento.App.Dominio\\HormonaCrecimiento.App.Dominio.csproj"
               }
             }
           }

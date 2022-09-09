@@ -15,7 +15,7 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Diagnostico = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Diagnostico = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -28,15 +28,15 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Documento = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Genero = table.Column<int>(type: "int", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Documento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Genero = table.Column<int>(type: "int", nullable: true),
                     Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Parentesco = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Familiar_Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Especialidad = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Especializacion = table.Column<int>(type: "int", nullable: true),
                     Codigo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RegistroRetThus = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -46,8 +46,7 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: true),
                     FamiliarId = table.Column<int>(type: "int", nullable: true),
-                    PediatraId = table.Column<int>(type: "int", nullable: true),
-                    EndocrinoId = table.Column<int>(type: "int", nullable: true),
+                    MedicoId = table.Column<int>(type: "int", nullable: true),
                     HistoriaClinicaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -57,26 +56,17 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                         name: "FK_Personas_Historias_HistoriaClinicaId",
                         column: x => x.HistoriaClinicaId,
                         principalTable: "Historias",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Personas_Personas_EndocrinoId",
-                        column: x => x.EndocrinoId,
-                        principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Personas_Personas_FamiliarId",
                         column: x => x.FamiliarId,
                         principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Personas_Personas_PediatraId",
-                        column: x => x.PediatraId,
+                        name: "FK_Personas_Personas_MedicoId",
+                        column: x => x.MedicoId,
                         principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -85,8 +75,8 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaHoraTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FechaHoraTime = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     HistoriaClinicaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -105,9 +95,9 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Valor = table.Column<float>(type: "real", nullable: false),
-                    TipoPatron = table.Column<int>(type: "int", nullable: false),
+                    FechaHora = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Valor = table.Column<float>(type: "real", nullable: true),
+                    TipoPatron = table.Column<int>(type: "int", nullable: true),
                     PacienteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -126,11 +116,6 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 column: "PacienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personas_EndocrinoId",
-                table: "Personas",
-                column: "EndocrinoId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Personas_FamiliarId",
                 table: "Personas",
                 column: "FamiliarId");
@@ -141,9 +126,9 @@ namespace HormonaCrecimiento.App.Persistencia.Migrations
                 column: "HistoriaClinicaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personas_PediatraId",
+                name: "IX_Personas_MedicoId",
                 table: "Personas",
-                column: "PediatraId");
+                column: "MedicoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tratamientos_HistoriaClinicaId",
