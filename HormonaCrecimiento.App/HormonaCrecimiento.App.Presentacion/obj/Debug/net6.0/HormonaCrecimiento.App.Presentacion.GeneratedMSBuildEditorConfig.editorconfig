@@ -1,0 +1,84 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HormonaCrecimiento.App.Presentacion
+build_property.RootNamespace = HormonaCrecimiento.App.Presentacion
+build_property.ProjectDir = C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Presentacion\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Presentacion
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MMedicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTU1lZGljb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MMedicos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTU1lZGljb3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MMedicos/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTU1lZGljb3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MMedicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTU1lZGljb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MMedicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTU1lZGljb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MPacientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVBhY2llbnRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MPacientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVBhY2llbnRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MPacientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVBhY2llbnRlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MPacientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVBhY2llbnRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/MPacientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTVBhY2llbnRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silent/Desktop/HormonaCrecimiento/HormonaCrecimiento.App/HormonaCrecimiento.App.Presentacion/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-av0p65bz0x

@@ -1,0 +1,77 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_MPacientes.CreateModel
+@{
+}
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div class="grid-container">
+
+ <div class="form-group">
+        <label for="Nombre">Nombre</label>
+        <input id="Nombre" asp-for="Paciente.Nombre" placeholder="Nombre paciente" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="Apellido">Apellido</label>
+        <input id="Apellido" asp-for="Paciente.Apellido" placeholder="Apellido paciente" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label for="Documento">Documento</label>
+        <input id="Documento" asp-for="Paciente.Documento" placeholder="Documento paciente" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Genero">Genero</label>
+        <select id="Genero" asp-for="Paciente.Genero"  class="form-control" >
+            <option selected>Masculino</option>
+            <option value="0">Masculino</option>
+            <option value="1">Femenino</option>
+            <option value="2">Intersexual</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Direccion">Direccion</label>
+        <input id="Direccion" asp-for="Paciente.Direccion" placeholder="Direccion paciente" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Latitud">Latitud</label>
+        <input id="Latitud" asp-for="Paciente.Latitud" placeholder="Latitud paciente" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Longitud">Longitud</label>
+        <input id="Longitud" asp-for="Paciente.Longitud" placeholder="Longitud paciente" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Ciudad">Ciudad</label>
+        <input id="Ciudad" asp-for="Paciente.Ciudad" placeholder="Ciudad paciente" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="FechaNacimiento">FechaNacimiento</label>
+        <input id="FechaNacimiento" asp-for="Paciente.FechaNacimiento" class="form-control" />
+    </div>
+
+    </div>
+   <br>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Save">Agregar Paciente</button>
+</form>
+
+<style>
+    .grid-container {
+        display:grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-container div{
+        padding: 6px 6px 6px 0px ;
+    }
+
+</style>

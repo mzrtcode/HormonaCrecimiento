@@ -1,0 +1,74 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_MMedicos.CreateModel
+@{
+}
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div class="grid-container">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input id="Nombre" asp-for="Medico.Nombre" placeholder="Nombre paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input id="Apellido" asp-for="Medico.Apellido" placeholder="Apellido paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Documento">Documento</label>
+            <input id="Documento" asp-for="Medico.Documento" placeholder="Documento paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Genero">Genero</label>
+            <select id="Genero" asp-for="Medico.Genero" class="form-control">
+                <option selected>Masculino</option>
+                <option value="0">Masculino</option>
+                <option value="1">Femenino</option>
+                <option value="2">Intersexual</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Especializacion">Especializacion</label>
+            <select id="Especializacion" asp-for="Medico.Especializacion" class="form-control">
+                <option selected>Endocrino</option>
+                <option value="0">Endocrino</option>
+                <option value="1">Pediatra</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Codigo">Codigo</label>
+            <input id="Codigo" asp-for="Medico.Codigo" placeholder="Codigo medico" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Telefono">Telefono</label>
+            <input id="Telefono" asp-for="Medico.Telefono" placeholder="Telefono paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Ciudad">RegistroReThus</label>
+            <input id="Ciudad" asp-for="Medico.RegistroRetThus" placeholder="RegistroRetThus paciente"
+                class="form-control" />
+        </div>
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Save">Agregar Medico</button>
+</form>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-container div {
+        padding: 6px 6px 6px 0px;
+    }
+</style>
