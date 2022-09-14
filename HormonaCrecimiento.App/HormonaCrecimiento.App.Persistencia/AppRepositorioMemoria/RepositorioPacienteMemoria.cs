@@ -14,26 +14,26 @@ namespace HormonaCrecimiento.App.Persistencia
             pacientes = new List<Paciente>(){
             new Paciente{
             Id=1,
-            Nombre="Diana",
-            Apellido="Muñoz",
-            Documento="10616892335",
+            Nombre="Tatiana",
+            Apellido="Rios",
+            Documento="0106565321",
             Genero=Genero.Femenino,
             Direccion="Calle 58 N° 55 33",
             Latitud=56.7564F,
             Longitud=56.56232F,
-            Ciudad="Cali",
+            Ciudad="Popayan",
             FechaNacimiento  = new DateTime(1990,01,01)
                },
             new Paciente{
             Id=2,
-            Nombre="Marcos",
-            Apellido="Diaz",
-            Documento="800212421",
+            Nombre="Alirio",
+            Apellido="Palechor",
+            Documento="1062652245",
             Genero=Genero.Masculino,
             Direccion="Kra 14 N° 98 11",
             Latitud=98.231F,
             Longitud=10.2654F,
-            Ciudad="Bogota",
+            Ciudad="Medellin",
             FechaNacimiento=new DateTime(1999,03,10)
                }
             };

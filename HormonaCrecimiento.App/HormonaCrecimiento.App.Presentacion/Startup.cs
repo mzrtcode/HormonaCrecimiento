@@ -29,7 +29,7 @@ namespace HormonaCrecimiento.App.Presentacion
 
             // AGREGAR CADA REPOSITORIO
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
-            //services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
+            services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
             //services.AddSingleton<IRepositorioHistoriaClinicaMemoria,RepositorioHistoriaClinicaMemoria>();
             //Agregar los servicios para verlos en el proyecto presentacion
 

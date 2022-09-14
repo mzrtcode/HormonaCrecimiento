@@ -6,8 +6,7 @@ using HormonaCrecimiento.App.Persistencia; //AGREGAR ESTA LINEA
 using HormonaCrecimiento.App.Dominio; //AGREGAR ESTA LINEA
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace HormonaCrecimiento.App.Pages_MMedicos
 {

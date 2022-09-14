@@ -3,18 +3,61 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HormonaCrecimiento.App.Presentacion</title>
+    <title>@ViewData["Title"] - HormonaCrecimiento</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HormonaCrecimiento.App.Presentacion.styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
      <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css" />
+
+     <style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-container a {
+        padding: 6px 6px 0px 0px;
+    }
+    h2{
+        margin:10px;
+    }
+
+    .main-buttons{
+        display: inline-block;
+
+        text-decoration: none;
+
+    }
+
+    .main-buttons div{
+
+            background-image: linear-gradient(to right, #B24592 0%, #F15F79  51%, #B24592  100%);
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+    }
+
+    .main-buttons div:hover{
+
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+    }
+
+
+</style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">HormonaCrecimiento.App.Presentacion</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">HormonaCrecimiento-App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,10 +65,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -37,6 +80,7 @@
             @RenderBody()
         </main>
     </div>
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
