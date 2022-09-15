@@ -25,13 +25,23 @@ namespace HormonaCrecimiento.App.Presentacion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IRepositorioPacienteMemoria,RepositorioPacienteMemoria>();
 
-            // AGREGAR CADA REPOSITORIO
+            // AGREGAR CADA REPOSITORIO MEMORIA
+            services.AddSingleton<IRepositorioPacienteMemoria,RepositorioPacienteMemoria>();
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
             services.AddSingleton<IRepositorioFamiliarMemoria,RepositorioFamiliarMemoria>();
-            //services.AddSingleton<IRepositorioHistoriaClinicaMemoria,RepositorioHistoriaClinicaMemoria>();
-            //Agregar los servicios para verlos en el proyecto presentacion
+            
+            //REPOSITORIO BASE DE DATOS
+            services.AddScoped<IRepositorioPaciente,RepositorioPaciente>();
+            services.AddScoped<IRepositorioMedico,RepositorioMedico>();
+            services.AddScoped<IRepositorioFamiliar,RepositorioFamiliar>();
+            services.AddScoped<IRepositorioHistoriaClinica,RepositorioHistoriaClinica>();
+
+            services.AddDbContext<Persistencia.AppContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("HormonaCrecimientoContext")));
+
+            
+            
 
             services.AddRazorPages();
         }

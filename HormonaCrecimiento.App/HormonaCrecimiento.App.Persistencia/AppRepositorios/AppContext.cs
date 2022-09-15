@@ -16,6 +16,11 @@ public class AppContext:DbContext
     public DbSet<PatronCrecimiento> PatronesCrecimiento{ get; set;} 
     public DbSet<Paciente> Pacientes{ get; set;}
 
+    public AppContext (DbContextOptions<AppContext> options)
+            : base(options)
+        {
+        }
+
 
 
 
