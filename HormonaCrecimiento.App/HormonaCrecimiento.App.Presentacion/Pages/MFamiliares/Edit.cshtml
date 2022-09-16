@@ -1,0 +1,32 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_MFamiliares.EditModel
+@{
+}
+
+<h1>Lista Familiares</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Opciones<a asp-page="./Create"> <span class="material-icons">person_add</span></a> </th>
+        </tr>
+    </thead>
+    @foreach (var familiar in Model.familiares)
+    {
+        <tbody>
+            <tr>
+                <td>@familiar.Nombre</td>
+                <td>@familiar.Apellido</td>
+                <td>@familiar.Genero</td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@familiar|.Id"> <span class="material-icons">description</span></a>
+                    <a asp-page="./Edit" asp-rou te-id="@familiar|.Id"> <span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@familiar|.Id"> <span class="material-icons">delete</span></a>
+                    </td>
+            </tr>
+        </tbody>    
+    }
+    
+</table>

@@ -1,0 +1,54 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_DBPacientes.IndexModel
+@{
+}
+<h1>Lista Pacientes</h1>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Genero</th>
+            <th scope="col">Opciones<a asp-page="./Create"> <span class="material-icons">person_add</span></a> </th>
+        </tr>
+    </thead>
+    @foreach (var paciente in Model.pacientes)
+    {
+        <tbody>
+            <tr>
+                <td>@paciente.Nombre</td>
+                <td>@paciente.Apellido</td>
+                <td>@paciente.Genero</td>
+                <td>
+                   
+                    <a asp-page="./Edit" asp-route-id="@paciente.Id"> <span class="material-icons">edit</span></a>
+                    <a asp-page="./Delete" asp-route-id="@paciente.Id"> <span class="material-icons">delete</span></a>
+                    </td>
+            </tr>
+        </tbody>    
+    }
+    
+</table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Detalles Paciente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
