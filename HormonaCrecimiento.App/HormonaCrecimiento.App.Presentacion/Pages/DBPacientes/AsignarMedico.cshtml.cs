@@ -27,12 +27,13 @@ namespace HormonaCrecimiento.App.Pages_DBPacientes
             this.RepositorioMedico =    RepositorioMedico;
             this.RepositorioPaciente = RepositorioPaciente;
         }
-        public IActionResult OnGet(int PacienteId)
+ public IActionResult OnGet(int id)
         { 
             Medicos = RepositorioMedico.GetAllMedicos();
-            Paciente = RepositorioPaciente.GetPaciente(PacienteId);
+            Paciente = RepositorioPaciente.GetPaciente(id);
+            
 
-            if(Paciente ==null){
+            if(Paciente == null){
                 return RedirectToPage("./NotFound");
             }else{
                 return Page();
@@ -45,3 +46,6 @@ namespace HormonaCrecimiento.App.Pages_DBPacientes
         }
     }
 }
+
+
+
