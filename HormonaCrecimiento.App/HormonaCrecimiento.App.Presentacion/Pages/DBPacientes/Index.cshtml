@@ -20,7 +20,8 @@
                 <td>@paciente.Apellido</td>
                 <td>@paciente.Genero</td>
                 <td>
-                   
+                  @*  <a asp-page="./Details" asp-route-id="@paciente.Id"> <span class="material-icons">Detalles</span></a> *@
+                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" > <span class="material-icons">description</span></a> 
                     <a asp-page="./Edit" asp-route-id="@paciente.Id"> <span class="material-icons">edit</span></a>
                     <a asp-page="./Delete" asp-route-id="@paciente.Id"> <span class="material-icons">delete</span></a>
                     </td>
@@ -44,7 +45,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <p>asd</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
