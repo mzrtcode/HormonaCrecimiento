@@ -13,6 +13,7 @@ namespace HormonaCrecimiento.App.Pages_DBPacientes
     {
         private readonly IRepositorioPaciente RepositorioPaciente;
         //Creamos la variable para hacer uso de ese repositorio
+        public Medico Medico { get;  set;}
 
         public Paciente Paciente { get;  set;}
 
@@ -26,6 +27,14 @@ namespace HormonaCrecimiento.App.Pages_DBPacientes
             if(Paciente == null){
                 return RedirectToPage("./NotFound");
             }else{
+                if(RepositorioPaciente.ConsultarMedico(id) == null){
+                    Medico = new Medico{
+                        Nombre = "Sin Asignar"
+                    };
+                    Paciente.Medico= Medico;
+                }else{
+                    Paciente.Medico = RepositorioPaciente.ConsultarMedico(id);
+                }
                 return Page();
             }
         }
