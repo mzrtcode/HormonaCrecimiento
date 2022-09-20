@@ -144,6 +144,10 @@ namespace HormonaCrecimiento.App.Persistencia
             return paciente.Medico;
         }
 
+        public IEnumerable<PatronCrecimiento> GetPatronesCrecimiento (int idpaciente){
+             throw new NotImplementedException();
+        }
+
 
     }
 }
