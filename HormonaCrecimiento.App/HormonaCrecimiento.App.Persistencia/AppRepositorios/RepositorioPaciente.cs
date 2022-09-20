@@ -1,3 +1,7 @@
+using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
 using System.Collections.Generic;
 using HormonaCrecimiento.App.Dominio;
 
@@ -133,6 +137,11 @@ namespace HormonaCrecimiento.App.Persistencia
             }
 
             return null;
+        }
+
+        public Medico ConsultarMedico(int idpaciente){
+            var paciente = _appContext.Pacientes.Where(p=> p.Id==idpaciente).Include(p => p.Medico).FirstOrDefault();
+            return paciente.Medico;
         }
 
 

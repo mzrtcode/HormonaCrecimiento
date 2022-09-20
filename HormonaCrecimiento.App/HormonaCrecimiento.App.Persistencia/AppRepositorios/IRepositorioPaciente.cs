@@ -15,6 +15,7 @@ namespace HormonaCrecimiento.App.Persistencia
 
         Familiar SetFamiliar(int idPaciente, int idFamiliar);
         HistoriaClinica SetHistoriaClinica(int idPaciente, int idHistoriaClinica);
+        Medico ConsultarMedico(int idpaciente);
 
     }
 }
