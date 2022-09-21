@@ -149,6 +149,13 @@ namespace HormonaCrecimiento.App.Persistencia
             return paciente.PatronesCrecimiento;
         }
 
+       public IEnumerable<Paciente> PacientesMedico (int idmedico){
+             
+            return _appContext.Pacientes.Where(p => p.Medico.Id==idmedico).ToList();
+        }
+
+
+
 
     }
 }

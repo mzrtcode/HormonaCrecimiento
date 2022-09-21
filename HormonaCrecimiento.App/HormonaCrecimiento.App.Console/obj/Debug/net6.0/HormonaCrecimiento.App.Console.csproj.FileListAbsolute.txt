@@ -186,3 +186,11 @@ C:\Users\silent\Desktop\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\ob
 C:\Users\silent\Desktop\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.pdb
 C:\Users\silent\Desktop\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.genruntimeconfig.cache
 C:\Users\silent\Desktop\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\ref\HormonaCrecimiento.App.Console.dll
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.csproj.AssemblyReference.cache
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.AssemblyInfoInputs.cache
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.AssemblyInfo.cs
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.csproj.CoreCompileInputs.cache
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.dll
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\refint\HormonaCrecimiento.App.Console.dll
+C:\Users\silent\Desktop\HormonaCrecimiento\HormonaCrecimiento.App\HormonaCrecimiento.App.Console\obj\Debug\net6.0\HormonaCrecimiento.App.Console.pdb

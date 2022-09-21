@@ -18,6 +18,7 @@ namespace HormonaCrecimiento.App.Persistencia
         Medico ConsultarMedico(int idpaciente); 
 
         IEnumerable<PatronCrecimiento>GetPatronesCrecimiento(int idpaciente);
+        IEnumerable<Paciente> PacientesMedico (int idmedico);
 
     }
 }

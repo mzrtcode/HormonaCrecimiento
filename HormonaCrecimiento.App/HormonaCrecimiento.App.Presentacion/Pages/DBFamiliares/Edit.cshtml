@@ -2,3 +2,61 @@
 @model HormonaCrecimiento.App.Pages_DBFamiliares.EditModel
 @{
 }
+<form method="post">
+     <input type="hidden" asp-for="Familiar.Id">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div class="grid-container">
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input id="Nombre" asp-for="Familiar.Nombre" placeholder="Nombre paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input id="Apellido" asp-for="Familiar.Apellido" placeholder="Apellido paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Documento">Documento</label>
+            <input id="Documento" asp-for="Familiar.Documento" placeholder="Documento paciente" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Genero">Genero</label>
+            <select id="Genero" asp-for="Familiar.Genero" class="form-control">
+                <option selected>Masculino</option>
+                <option value="0">Masculino</option>
+                <option value="1">Femenino</option>
+                <option value="2">Intersexual</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label for="Parentesco">Parentesco</label>
+            <input id="Parentesco" asp-for="Familiar.Parentesco" placeholder="Parentesco familiar" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Correo">Telefono</label>
+            <input id="Correo" asp-for="Familiar.Correo" placeholder="Correo paciente" class="form-control" />
+        </div>
+
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary" asp-page-handler="Update">Modificar Familiar</button>
+</form>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-container div {
+        padding: 6px 6px 6px 0px;
+    }
+</style>
+

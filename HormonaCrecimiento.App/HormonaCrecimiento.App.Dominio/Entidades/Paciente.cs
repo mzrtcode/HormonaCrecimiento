@@ -9,7 +9,7 @@ public class Paciente:Persona
     public DateTime? FechaNacimiento { get; set; }
     public Familiar? Familiar { get; set; }
     public Medico? Medico {  get; set; }
-    public System.Collections.Generic.List<PatronCrecimiento> PatronesCrecimiento { get; set;}
+    public System.Collections.Generic.List<PatronCrecimiento>? PatronesCrecimiento { get; set;}
     public HistoriaClinica? HistoriaClinica { get; set; }
 
 

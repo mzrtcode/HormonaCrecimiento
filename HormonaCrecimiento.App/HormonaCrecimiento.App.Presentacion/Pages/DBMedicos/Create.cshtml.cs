@@ -5,8 +5,10 @@ namespace HormonaCrecimiento.App.Pages_DBMedicos
 {
     public class CreateModel : PageModel
     {
+        
         public void OnGet()
         {
+           
         }
     }
 }
