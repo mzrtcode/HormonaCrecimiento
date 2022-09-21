@@ -145,7 +145,8 @@ namespace HormonaCrecimiento.App.Persistencia
         }
 
         public IEnumerable<PatronCrecimiento> GetPatronesCrecimiento (int idpaciente){
-             throw new NotImplementedException();
+             var paciente = _appContext.Pacientes.Where(p=> p.Id==idpaciente).Include(p => p.PatronesCrecimiento).FirstOrDefault();
+            return paciente.PatronesCrecimiento;
         }
 
 
