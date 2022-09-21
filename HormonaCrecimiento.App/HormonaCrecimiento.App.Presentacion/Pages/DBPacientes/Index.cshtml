@@ -20,14 +20,15 @@
                 <td>@paciente.Apellido</td>
                 <td>@paciente.Genero</td>
                 <td>
-                  @*  <a asp-page="./Details" asp-route-id="@paciente.Id"> <span class="material-icons">Detalles</span></a> *@
-                    <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" > <span class="material-icons">description</span></a> 
+
                     <a asp-page="./Edit" asp-route-id="@paciente.Id"> <span class="material-icons">edit</span></a>
                     <a asp-page="./Delete" asp-route-id="@paciente.Id"> <span class="material-icons">delete</span></a>
-                    <a asp-page="./AsignarMedico" asp-route-id="@paciente.Id"> <span class="material-icons">medical_services</span></a>
+                    <a asp-page="./Details" asp-route-id="@paciente.Id"> <span class="material-icons">description</span></a> 
+                    <a asp-page="./AsignarMedico" asp-route-id="@paciente.Id">   <span class="material-icons">medical_services</span></a>
+                    <a asp-page="./AddPatronCrecimiento" asp-route-id="@paciente.Id"> <span class="material-icons">thermostat_auto</span></a>
                     </td>
             </tr>
-        </tbody>    
+        </tbody>   
     }
     
 </table>
