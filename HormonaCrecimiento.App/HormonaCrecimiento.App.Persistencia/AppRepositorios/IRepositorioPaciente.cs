@@ -17,8 +17,9 @@ namespace HormonaCrecimiento.App.Persistencia
         HistoriaClinica SetHistoriaClinica(int idPaciente, int idHistoriaClinica);
         Medico ConsultarMedico(int idpaciente); 
 
-        IEnumerable<PatronCrecimiento>GetPatronesCrecimiento(int idpaciente);
         IEnumerable<Paciente> PacientesMedico (int idmedico);
+
+        IEnumerable<PatronCrecimiento> GetPatronesCrecimiento (int idpaciente);
 
     }
 }

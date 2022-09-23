@@ -144,15 +144,23 @@ namespace HormonaCrecimiento.App.Persistencia
             return paciente.Medico;
         }
 
+       /*  public IEnumerable<PatronCrecimiento> GetPatronesCrecimiento (int idpaciente){
+             var paciente = _appContext.Pacientes.Where(p=> p.Id==idpaciente).Include(p => p.PatronesCrecimiento).FirstOrDefault();
+             return _appContext.PatronesCrecimiento.Where(p=> p.Id==idpaciente).ToList();
+       
+        }
+ */
+
         public IEnumerable<PatronCrecimiento> GetPatronesCrecimiento (int idpaciente){
              var paciente = _appContext.Pacientes.Where(p=> p.Id==idpaciente).Include(p => p.PatronesCrecimiento).FirstOrDefault();
             return paciente.PatronesCrecimiento;
         }
-
        public IEnumerable<Paciente> PacientesMedico (int idmedico){
              
             return _appContext.Pacientes.Where(p => p.Medico.Id==idmedico).ToList();
         }
+
+ 
 
 
 
